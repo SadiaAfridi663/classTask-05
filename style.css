@@ -14,10 +14,17 @@ body{
     padding: 30px;
 }
 .age-calculator{
-    width: 40%;
+    width: 70%;
     margin: auto;
     display: flex;
     justify-content: space-between;
     padding: 15px;
     background-color: black;
+}
+#dob{
+    /* width: 40%; */
+    padding: 10px 30px;
+}
+#calculateBtn{
+    padding: 10px 20px;
 }

@@ -1,0 +1,23 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 40%;
+    height: 80%;
+    background-color: #f0f0f0;
+    padding: 30px;
+}
+.age-calculator{
+    width: 40%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: black;
+}

@@ -28,3 +28,38 @@ body{
 #calculateBtn{
     padding: 10px 20px;
 }
+.birth-date{
+    width: 75%;
+    /* background-color: black; */
+    border: 1px solid;
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#year-container{
+    background-color: black;
+    width: 20%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#month-container{
+    width: 20%;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#date-container{
+    width: 20%;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

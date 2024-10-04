@@ -9,24 +9,29 @@
 </head>
 
 <body>
-    <div class="container">
+    <video id = "birthday-vedio"  src="./assets/birthday-vedio.mp4" autoplay muted ></video>
+    <div id="container">
         <div class="age-calculator">
             <input type="date" id="dob" placeholder="Select your date of birth">
             <button id="calculateBtn">Calculate</button>
         </div>
         <div class="birth-date">
             <div id="year-container">
-                <p id="year">0</p>
+                <p id="year">00</p>
+                <span>Years</span>
             </div>
             <div id="month-container">
-                <p id="month">0</p>
+                <p id="month">00</p>
+                <span>months</span>
             </div>
-            <div id="date-container">
-                <p id="date">0</p>
+            <div id="day-container">
+                <p id="day">00</p>
+                <span>Days</span>
             </div>
         </div>
 
     </div>
+    <script src="./index.js"></script>
 </body>
 
 </html>

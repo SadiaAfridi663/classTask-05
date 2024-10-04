@@ -146,3 +146,37 @@ span {
     transition: all 0.4s ease;
     
 }
+@media(max-width: 530px){
+    .age-calculator{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    #dob{
+        width: 85%;
+    }
+    #calculateBtn{
+        width: 40%;
+        height: 40px; 
+    }
+    .birth-date{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid transparent;
+        gap: 15px;
+    }
+    #year-container{
+        width: 80%;
+        height: 60px;
+    }
+    #month-container{
+        width: 80%;
+        height: 60px;
+    }
+    #day-container{
+        width: 80%;
+        height: 60px;
+    }
+}

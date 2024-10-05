@@ -11,7 +11,7 @@ body {
 
 #container {
 
-    width: 35%;
+    width: 450px;
     background-color: #f0f0f0;
     padding: 30px;
     background-color: #1e70ec;
@@ -19,17 +19,17 @@ body {
 }
 
 
-@keyframes slideIn {
-    from {
-        transform: translateY(-500px);
+/* @keyframes slideIn { */
+    /* from { */
+        /* transform: translateY(-500px); */
         /* opacity: 0; */
-    }
+    /* } */
 
-    to {
-        transform: translateY(0);
+    /* to {
+        transform: translateY(0); */
         /* opacity: 1; */
-    }
-}
+    /* }
+} */
 
 .age-calculator {
     width: 80%;
@@ -44,10 +44,18 @@ body {
 #dob {
     width: 50%;
     padding: 10px 5px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+}
+#dob:focus{
+    outline: none;
 }
 
 #calculateBtn {
     padding: 10px 15px;
+    border-radius: 5px;
+    background-color: white;
+    border: 1px solid transparent;
 }
 
 .birth-date {

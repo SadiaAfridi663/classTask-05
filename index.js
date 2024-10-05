@@ -68,25 +68,9 @@ document.getElementById("calculateBtn").addEventListener("click", function () {
   const birthdayVideo = document.getElementById("birthday-vedio");
   if (today.getMonth() === dob.getMonth() && today.getDate() === dob.getDate()) {
     console.log("happy birthday")
-    // const videoContainer = document.createElement("div");
-    // videoContainer.className = "video-container";
-
-    // const video = document.createElement("video");
-    // video.src = "./assets/birthday-video2.mp4";
-    // video.controls = true;
-//     video.className = "video"
-//     video.autoplay = true;  // Set autoplay
-// video.muted = true;    
-    // videoContainer.appendChild(video);
-    // mainContainer.appendChild(videoContainer);
-    // document.getElementById("birthday-vedio")
     birthdayVideo.style.display = "block"
     birthdayVideo.play();
-    birthdayVideo.muted = true;
-    birthdayVideo.loop = true;
-    birthdayVideo.volume = 0.5;
     var resetButton = document.createElement("button")
-    // resetButton.textContent = "Reset"
     resetButton.className = "reset-button"
     var resetLink = document.createElement("a")
     resetLink.setAttribute("href", "./index.html")
@@ -94,39 +78,9 @@ document.getElementById("calculateBtn").addEventListener("click", function () {
     resetButton.appendChild(resetLink)
     mainContainer.style.opacity = 0
       document.body.appendChild(resetButton)
-
-
     } else {
       birthdayVideo.style.display = "none"
       birthdayVideo.pause();
       mainContainer.style.opacity = 1
   }
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//
-// var today = new Date();
-// var age = today.getFullYear() - birthday.getFullYear();
-// var monthDiff = today.getMonth() - birthday.getMonth();
-// if (monthDiff < 0 || (monthDiff === 0 && today.getDate() <
-// birthday.getDate())) {
-//     age--;
-//     }
-//     document.getElementById("age").innerHTML = age;

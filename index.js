@@ -21,48 +21,88 @@ document.getElementById("calculateBtn").addEventListener("click", function () {
   var yearContainer = document.getElementById("year")
   var monthContainer = document.getElementById("month")
   var dayContainer = document.getElementById("day")
+  if (months <= 0 && days < 0 && years <= 0) {
+    alert("Date of birth needs to be earlier than the age at date.")
+  }
+  else {
+    console.log("correct date")
+    // if (days <= 0) {
+    //   console.log(currentMonth)
+    //   if (birthMonth === 3 || birthMonth === 5 || birthMonth === 8 || birthMonth === 10) {
+    //     console.log("month = 30 days")
+    //     days = days + 30;
+    //     months--
+    //   }
+    //   else if (birthMonth === 1) {
+    //     console.log("feb")
+    //     if ((birthYear % 4 === 0) && (birthYear % 100 !== 0) || (birthYear % 400 === 0)) {
+    //       console.log(birthYear + ' is a leap year');
+    //       days = days + 29
+    //       months--
+    //     }
+    //     else {
+    //       console.log(birthYear + ' is not a leap year');
+    //       days = days + 28
+    //       months--
+    //     }
+    //   }
+    //   else {
+    //     console.log("month = 31 days")
+    //     days = days + 31;
+    //     months--
+    //   }
+    // }
+    // if (months < 0) {
+    //   months += 12
+    //   years--
+    // }
+
+    // test
+
+    if (days < 0) {
+
+      const daysInPreviousMonth = new Date(currentYear, currentMonth, 0).getDate();
+      console.log(`days In Previous Month ${daysInPreviousMonth}`)
+      days += daysInPreviousMonth;
+      months--;
+    }
+    
+    if (months < 0) {
+      // Handle negative month by borrowing a year
+      months += 12;
+      years--;
+    }
 
 
-  if(currentMonth < birthMonth){
-    months = months + 12
-    years--
-  }
-  if(currentDay < birthDay){
-    if(currentMonth === 3 || currentMonth === 5 || currentMonth === 8 || currentMonth === 10 ){
-      days = days + 30;
-      months--
+    if (years < 10) {
+      yearContainer.textContent = `0${years}`
+    } else {
+      yearContainer.textContent = years
     }
-    else if(currentMonth === 1){
-      if(currentYear % 4 === 0 && currentYear % 100 !== 0 || currentYear % 400 === 0 ){
-          days = days + 29
-          months--
-          }
-          else{
-            days = days + 28
-            months--
-          }
+    if (months < 10) {
+      monthContainer.textContent = `0${months}`
+    } else {
+      monthContainer.textContent = months
     }
-    else{
-      days = days + 31;
-      months--
+    if (days < 10) {
+      dayContainer.textContent = `0${days}`
+    } else {
+      dayContainer.textContent = days
     }
   }
 
-  if (years < 10) {
-    yearContainer.textContent = `0${years}`
-  }else{
-    yearContainer.textContent = years
-  }
-  if (months < 10) {
-    monthContainer.textContent = `0${months}`
-  }else{
-    monthContainer.textContent = months
-  }
-  if (days < 10) {
-    dayContainer.textContent = `0${days}`
-  }else{
-    dayContainer.textContent = days
-  }
+
+  const resetBtn = document.createElement("button")
+  resetBtn.className = "reset-button"
+  var link = document.createElement("a")
+  link.textContent = "Reset"
+  resetBtn.appendChild(link)
+  resetBtn.addEventListener("click", function () {
+    link.setAttribute("href", "./index.html")
+  })
+  mainContainer.appendChild(resetBtn)
+
+
 
 
   const birthdayVideo = document.getElementById("birthday-vedio");
@@ -70,17 +110,21 @@ document.getElementById("calculateBtn").addEventListener("click", function () {
     console.log("happy birthday")
     birthdayVideo.style.display = "block"
     birthdayVideo.play();
-    var resetButton = document.createElement("button")
-    resetButton.className = "reset-button"
+    var videoResetButton = document.createElement("button")
+    videoResetButton.className = "video-reset-btn"
     var resetLink = document.createElement("a")
     resetLink.setAttribute("href", "./index.html")
     resetLink.textContent = "Reset"
-    resetButton.appendChild(resetLink)
+    videoResetButton.appendChild(resetLink)
     mainContainer.style.opacity = 0
-      document.body.appendChild(resetButton)
-    } else {
-      birthdayVideo.style.display = "none"
-      birthdayVideo.pause();
-      mainContainer.style.opacity = 1
+    document.body.appendChild(videoResetButton)
+  } else {
+    birthdayVideo.style.display = "none"
+    birthdayVideo.pause();
+    mainContainer.style.opacity = 1
   }
 });
+
+
+
+

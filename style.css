@@ -15,21 +15,23 @@ body {
     background-color: #f0f0f0;
     padding: 30px;
     background-color: #1e70ec;
+    border-radius: 5px;
+    box-shadow:  -1px 0px 5px #588ad4;
     animation: slideIn 2.5s ;
 }
 
 
-/* @keyframes slideIn { */
-    /* from { */
-        /* transform: translateY(-500px); */
+@keyframes slideIn {
+    from {
+        transform: translateY(-500px);
         /* opacity: 0; */
-    /* } */
+    }
 
-    /* to {
-        transform: translateY(0); */
+    to {
+        transform: translateY(0);
         /* opacity: 1; */
-    /* }
-} */
+    }
+}
 
 .age-calculator {
     width: 80%;
@@ -125,8 +127,23 @@ span {
     z-index: -1;
     display: none;
 }
+.reset-button{
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 45px;
+    background-color: black;
+    color: #f0f0f0;
+    border: 1px solid black;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 17px;
 
-.reset-button {
+}
+.video-reset-btn {
     z-index: 100;
     width: 120px;
     height: 45px;
@@ -136,12 +153,14 @@ span {
     color: #f0f0f0;
     border: 1px solid white;
     border-radius: 7px;
+    cursor: pointer;
+    font-size: 17px;
 }
-.reset-button a{
+ a{
     color: white;
     text-decoration: none;
 }
-.reset-button:hover{
+.video-reset-btn:hover{
     transform: scale(1.1);
     transition: all 0.4s ease;
     

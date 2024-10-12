@@ -17,21 +17,8 @@ body {
     background-color: #1e70ec;
     border-radius: 5px;
     box-shadow:  -1px 0px 5px #588ad4;
-    animation: slideIn 2.5s ;
 }
 
-
-@keyframes slideIn {
-    from {
-        transform: translateY(-500px);
-        /* opacity: 0; */
-    }
-
-    to {
-        transform: translateY(0);
-        /* opacity: 1; */
-    }
-}
 
 .age-calculator {
     width: 80%;

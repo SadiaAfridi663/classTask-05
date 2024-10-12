@@ -6,6 +6,7 @@ document.getElementById("calculateBtn").addEventListener("click", function () {
 
     alert("Please select a date!");
   }
+  else{
   const dob = new Date(dobInput);
   const today = new Date();
   const currentYear = today.getFullYear()
@@ -26,38 +27,7 @@ document.getElementById("calculateBtn").addEventListener("click", function () {
   }
   else {
     console.log("correct date")
-    // if (days <= 0) {
-    //   console.log(currentMonth)
-    //   if (birthMonth === 3 || birthMonth === 5 || birthMonth === 8 || birthMonth === 10) {
-    //     console.log("month = 30 days")
-    //     days = days + 30;
-    //     months--
-    //   }
-    //   else if (birthMonth === 1) {
-    //     console.log("feb")
-    //     if ((birthYear % 4 === 0) && (birthYear % 100 !== 0) || (birthYear % 400 === 0)) {
-    //       console.log(birthYear + ' is a leap year');
-    //       days = days + 29
-    //       months--
-    //     }
-    //     else {
-    //       console.log(birthYear + ' is not a leap year');
-    //       days = days + 28
-    //       months--
-    //     }
-    //   }
-    //   else {
-    //     console.log("month = 31 days")
-    //     days = days + 31;
-    //     months--
-    //   }
-    // }
-    // if (months < 0) {
-    //   months += 12
-    //   years--
-    // }
 
-    // test
 
     if (days < 0) {
 
@@ -68,7 +38,6 @@ document.getElementById("calculateBtn").addEventListener("click", function () {
     }
     
     if (months < 0) {
-      // Handle negative month by borrowing a year
       months += 12;
       years--;
     }
@@ -89,9 +58,8 @@ document.getElementById("calculateBtn").addEventListener("click", function () {
     } else {
       dayContainer.textContent = days
     }
+  
   }
-
-
   const resetBtn = document.createElement("button")
   resetBtn.className = "reset-button"
   var link = document.createElement("a")
@@ -101,6 +69,10 @@ document.getElementById("calculateBtn").addEventListener("click", function () {
     link.setAttribute("href", "./index.html")
   })
   mainContainer.appendChild(resetBtn)
+}
+
+
+ 
 
 
 

@@ -17,7 +17,9 @@ body {
     background-color: #1e70ec;
     border-radius: 5px;
     box-shadow:  -1px 0px 5px #588ad4;
+    animation: slideIn 2.5s ;
 }
+
 
 
 .age-calculator {

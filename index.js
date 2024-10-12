@@ -27,8 +27,6 @@ document.getElementById("calculateBtn").addEventListener("click", function () {
   }
   else {
     console.log("correct date")
-
-
     if (days < 0) {
 
       const daysInPreviousMonth = new Date(currentYear, currentMonth, 0).getDate();
@@ -38,7 +36,6 @@ document.getElementById("calculateBtn").addEventListener("click", function () {
     }
     
     if (months < 0) {
-      months += 12;
       years--;
     }
 
@@ -58,7 +55,6 @@ document.getElementById("calculateBtn").addEventListener("click", function () {
     } else {
       dayContainer.textContent = days
     }
-  
   }
   const resetBtn = document.createElement("button")
   resetBtn.className = "reset-button"
@@ -72,7 +68,7 @@ document.getElementById("calculateBtn").addEventListener("click", function () {
 }
 
 
- 
+
 
 
 
